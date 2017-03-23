@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var number = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,7 +24,15 @@ class ViewController: UIViewController {
 
 
     @IBAction func tekanButton(_ sender: UIButton) {
-        self.view.backgroundColor = UIColor.red
+        if self.number == 0 {
+            self.view.backgroundColor = UIColor.red
+        } else if self.number == 1 {
+            self.view.backgroundColor = UIColor.blue
+        }
+
+
+        
+        self.number += 1
     }
 }
 
